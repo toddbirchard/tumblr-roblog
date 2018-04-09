@@ -190,24 +190,35 @@
             
             
             .Interesting .post-inner::before {
-                content: "Recommended via Pocket";
+                content: " ";
                 display: inline-block;
-                padding-left: 30px;
-                background: url(https://www.shareicon.net/download/2016/07/10/119939_pocket_512x512.png) left center no-repeat;
-                background-size: 8%;
-                color: hsl(300, 2.1%, 52.4%);
-                margin: -7px auto 20px auto;
-                width: 90%;
-                text-align: right;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/pocket.png') left center no-repeat;
+                background-size: cover;
+                width: 100px;
+height: 25px;
+margin-left: 10px;
             }
       
             .Technology .post-inner a.block-link {
                 background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/nyt.jpg') !important;
                 background-size: cover !important;
             }
+            
+            .Medium .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/mediumlogo.png') !important;
+                background-size: cover !important;
+                width: 85px;
+height: 16px;
+margin-left: 1px;
+            }
+            
+            
+            
       
             .hacking .post-inner a.block-link {
-                background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/hn.jpg') !important;
+                background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/hackernews.png') !important;
                 background-size: cover !important;
             }
             
@@ -226,12 +237,9 @@
                 background-size:cover;
             }
             
-            .Twitter .post-inner h2.post-title a {
-                font-size:16px;
-                color: #1eaedb !important;
-            }
+            
             .Slashdot a.block-link {
-                    background-image: url(https://tumblr.nyc3.digitaloceanspaces.com/slasdot.png) !important;
+                    background-image: url(https://tumblr.nyc3.digitaloceanspaces.com/slash.png) !important;
                 background-size: cover !important;
             }
             
@@ -243,6 +251,11 @@
             
             a.block-link {
                 color:white !important;
+            }
+            
+            .tumblr_video_container {
+                width:100% !important;
+                height: auto !important;
             }
             
             
@@ -463,12 +476,27 @@
             
             .posts article.post .post-inner h2.post-title a,
             .posts article.post .post-inner h2.post-title a{
-                color:white !important;
+                color:white;
             }
             
             .view-icon {
                 opacity:1 !important;
                 color: white !important;
+            }
+            
+            .Twitter .post-inner h2.post-title a {
+                font-size:16px;
+                color: #1eaedb !important;
+            }
+            
+            .Instagram .post-inner::before {
+                content:" ";
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/insta.png');
+                background-size:cover;
+                width: 110px;
+                height: 38px;
+                display: block;
+                margin-bottom: 10px;
             }
             
             /* Custom CSS */
