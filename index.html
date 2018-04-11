@@ -197,6 +197,7 @@
                 width: 100px;
 height: 25px;
 margin-left: 10px;
+margin-bottom: 5px;
             }
       
             .Technology .post-inner a.block-link {
@@ -238,15 +239,47 @@ margin-left: 1px;
             }
             
             
-            .Slashdot a.block-link {
-                    background-image: url(https://tumblr.nyc3.digitaloceanspaces.com/slash.png) !important;
+            .technologygoogleSlashdot .post-inner::before {
+                content:" ";
+                height:30px;
+                width:30px;
+                display:inline-block;
+                    background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/slashdot-icon.png') !important;
                 background-size: cover !important;
+            }
+            
+            
+            .technologygoogleSlashdot .post-inner::after {
+                content: "trending on Slashdot";
+                display: inline-block;
+                position: absolute;
+                top: 32px;
+    right: 26px;
             }
             
             .Medium a.block-link {
                 background-image:url('https://tumblr.nyc3.digitaloceanspaces.com/medium2.jpg') !important;
                 background-size:cover !important;
+                display:inline-block;
+            }
+            
+            .Hacker .post-inner::before{
+                    background-image: url(https://tumblr.nyc3.digitaloceanspaces.com/hackerlogo.png);
+    background-size: cover;
+    content: " ";
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    margin-bottom: 10px;
                 
+            }
+            
+            .Hacker .post-inner::after{
+                content: "via Hacker News";
+                display: inline-block;
+                position: absolute;
+                top: 32px;
+    right: 26px;
             }
             
             a.block-link {
@@ -957,7 +990,7 @@ margin-left: 1px;
                                           <div class="image-wrap{block:IndexPage} {select:Photo Link}{/block:IndexPage}{block:PermalinkPage} {select:Photo Link Permalink}{/block:PermalinkPage}">
                                     
                                                 <a href="{Permalink}" class="postlink">
-                                                      <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                                                      <img class="previewimg" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
                                                 </a>
                                             
                                                 <a href="{PhotoURL-HighRes}" class="imagelink {select:Photo Link}{/block:IndexPage}{block:PermalinkPage} {select:Photo Link Permalink}{/block:PermalinkPage}">
@@ -1145,6 +1178,10 @@ margin-left: 1px;
                                                 </div>
 
                                           </a>
+                                          
+                                          <a href="{Permalink}" class="postlink">
+                                                      <img class="previewimg" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                                                </a>
     
                                           {block:Description}
           
@@ -1587,6 +1624,10 @@ margin-left: 1px;
                                                                       {/block:Excerpt}
                                                                   </div>
                                                             </a>
+                                                            {block:Thumbnail} 
+                                                            <img src="{Thumbnail}">
+                                                            {/block:Thumbnail}
+                                                            
                             
                                                             {block:Description}
                             
@@ -1773,30 +1814,45 @@ margin-left: 1px;
       
       <script>
           //$('.post');
-          $(document).ready(function() {
-              var token = '5aca1fa1a6277761e0da615401088ed62e4aaf92fba08'
+         
               
-              $('.Technology').each(function( index, element ) {
-                  var posturl = $( element ).find('.block-link').attr('href');
-                  var url = posturl.replace("https://t.umblr.com/redirect?z=", "");
-                  var apiCall = "https://api.linkpreview.net/?key=" + token + "&q=" + url;
+              
+              
+              $( ".Pocket" ).each( function( index, el ) {
+                  console.log(el);
+                  console.log($( this ).find('a:nth-of-type(2)').attr('href'));
+                var posturl = $( this ).find('a:nth-of-type(2)').attr('href');
+                
+                //.replace('https://t.umblr.com/redirect?z=', '');
+                var token = '5aca1fa1a6277761e0da615401088ed62e4aaf92fba08';
+                var apiCall = "https://api.linkpreview.net/?key=" + token + "&q=" + posturl;
+                      var imgurl = $( 'previewimg' ).attr('src', posturl);
+                      $.get( apiCall, function( data ) {
+                          console.log(data);
+                          $( obj ).find('.previewimg').attr('src', data.image);
+                });
+            });
+              
+              
+              /*
+              
+              
+              $.each( 'article', function( key, value ) {
+                    console.log('obj = ' + obj);
+                      var posturl = $( obj ).find('.content a').attr('href').replace('https://t.umblr.com/redirect?z=', '');
+                      var url = posturl;
+                      
+                      console.log('posturl = ' + posturl);
+                      var apiCall = "https://api.linkpreview.net/?key=" + token + "&q=" + posturl;
+                      
+                      $.getJSON( apiCall, function( data ) {
+                          console.log(data.image);
+                          $( obj ).find('.previewimg').attr('src', data.image);
+                });
                   
-                  console.log(apiCall);
-                  /*
-                  $.ajax({
-                    url: apiCall,
-                    success: function(result){
-                        console.log(result);
-                        $( element ).append(result);
-                        }
-                    });
+                  
                   */
-                  
-                  
-                  //var apiCall = 'http://api.linkpreview.net/?key=5ac9fa1363f31289c71a3a46b3f3ef38d65ff4583a19e&q=' + posturl 
-              });
               
-          });
           
       </script>
 
