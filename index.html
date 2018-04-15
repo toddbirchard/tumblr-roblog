@@ -178,7 +178,93 @@
 
       <style type="text/css">
       
+      .tmblr-full {
+          margin:0;
+      }
       
+      #header {
+          background-position-y: center !important;
+      }
+      
+      .NYT .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background: url('http://pluspng.com/img-png/nytimes-logo-png-symbol-new-york-times-1498.png') left center no-repeat;
+                background-size: contain;
+                width: 25px;
+height: 25px;
+margin-bottom: 5px;
+            }
+            
+            
+            .NYT .post-inner::after {
+                content: "trending on NYT";
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    font-size: 14px;
+    color: #989898;
+            }
+      
+      .Meetup .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background: url('https://assets.materialup.com/uploads/30b4082d-3390-44d6-973e-60ca8972f854/preview') left center no-repeat;
+                background-size: cover;
+                width: 25px;
+height: 25px;
+margin-bottom: 5px;
+            }
+            
+            
+            .Meetup .post-inner::after {
+                content: "RSVPed to event";
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    font-size: 14px;
+    color: #989898;
+            }
+      
+      .Meetup .host,
+      .Meetup .postlink{
+          display:none !important;
+      }
+      
+      .Meetup .tumblr_theme_marker_description {
+          font-size: 20px;
+          font-weight: 500;
+      }
+      
+      .Meetup a.block-link {
+    background: none !important;
+    color: #636367 !important;
+    padding:0 !important;
+}
+      
+      .Meetup .tumblr_theme_marker_description p,
+      .Meetup .post-inner p {
+          display:none;
+          font-weight: 100;
+      }
+      
+      .Meetup .tumblr_theme_marker_description p:nth-of-type(1),
+      .Meetup .tumblr_theme_marker_description p:nth-of-type(2),
+      .Meetup .post-inner p:nth-of-type(2),
+      .Meetup .post-inner p:nth-of-type(1){
+          display:block;
+      }
+      
+      .Meetup .caption {
+          margin:0 !important;
+      }
+      
+      .Meetup img {
+          margin-bottom:15px !important;
+      }
+    
       
       .JIRA .post-inner::before {
                 content: " ";
