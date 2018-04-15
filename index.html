@@ -178,6 +178,28 @@
 
       <style type="text/css">
       
+      
+      
+      .JIRA .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background: url('https://cdn6.aptoide.com/imgs/9/9/b/99b698eae5433cc15b23862f4a305a37_icon.png') left center no-repeat;
+                background-size: cover;
+                width: 25px;
+height: 25px;
+margin-bottom: 5px;
+            }
+            
+            
+            .JIRA .post-inner::after {
+                content: "issue completed";
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    font-size: 14px;
+    color: #989898;
+            }
           
       
       
@@ -197,22 +219,21 @@
             .Interesting .post-inner::before {
                 content: " ";
                 display: inline-block;
-                background: url('https://tumblr.nyc3.digitaloceanspaces.com/pocket.png') left center no-repeat;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/pocketdark.png') left center no-repeat;
                 background-size: cover;
                 width: 100px;
 height: 25px;
-margin-left: 10px;
 margin-bottom: 5px;
             }
             
             
             .Interesting .post-inner::after {
-            content: "via my reading list";
+                content: "via my reading list";
     display: inline-block;
     position: absolute;
     top: 22px;
-        right: 44px;
-        font-size: 14px;
+    right: 27px;
+    font-size: 14px;
     color: #989898;
             }
             
@@ -244,9 +265,9 @@ margin-left: 1px;
             }
             
             .Twitter .post-inner {
-                background-image:url('https://tumblr.nyc3.digitaloceanspaces.com/twittercard.png') !important;
-                background-size:cover !important;
-                border: 2px solid #2daae1;
+             background: linear-gradient( rgba(255, 255, 255, 0.1) 100%, rgba(255, 255, 255, 0.1)100%),url(https://tumblr.nyc3.digitaloceanspaces.com/twittercard.png) !important;
+    background-size: cover  !important;
+    background-position: 0px  !important;
             }
       
             .Twitter .post-inner h2::before {
@@ -259,7 +280,7 @@ margin-left: 1px;
             }
             
             .Twitter .post-inner a{
-            
+                color: #18607f;
             float: right;
             }
             
@@ -292,8 +313,8 @@ margin-left: 1px;
                     background-image: url(https://tumblr.nyc3.digitaloceanspaces.com/hackerlogo.png);
     background-size: cover;
     content: " ";
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     margin-bottom: 10px;
                 
@@ -303,8 +324,9 @@ margin-left: 1px;
                 content: "via Hacker News";
                 display: inline-block;
                 position: absolute;
-                top: 32px;
-    right: 26px;
+                    top: 25px;
+                right: 26px;
+                color: #989898;
             }
             
             a.block-link {
@@ -453,6 +475,10 @@ margin-left: 1px;
                   margin: {text:Post Grid Spacing}px; /* Post grid spacing */
             }
             
+            article.post img {
+                margin:auto;
+            }
+            
             .posts article.post .post-inner,
             .posts article.post .post-inner h1,
             .posts article.post .post-inner h2,
@@ -528,7 +554,7 @@ margin-left: 1px;
             }
             
             .Interesting .post-inner .image-wrap > .postlink > img {
-                width:90%;
+                width:100%;
                 margin:0 auto;
             }
             
