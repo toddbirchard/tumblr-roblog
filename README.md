@@ -1,10 +1,13 @@
 # Roblog Tumblr Theme
 
-![Roblog](https://miscellaneous.nyc3.digitaloceanspaces.com/roblogscreen.png)
+https://img.shields.io/badge/platform-tumblr-lightgray.svg?longCache=true&style=flat-square
 
-A Tumblr theme designed to function and exist autonomously. Posts are automatically syndicated from integrations with automation services such as IFTTT, Zapier, Automate.io, Parabola, and others. Perfect for people who dont care about Tumblr but love backlinks.
+A Tumblr theme which manages itself autonomously. Posts are syndicated via automated integrations with services such as IFTTT, Zapier, Automate.io, Parabola, and others. Perfect for people who dont care about Tumblr but love backlinks.
 
-## Services 
+![Roblog](https://tumblr.nyc3.digitaloceanspaces.com/placeit%20(3).png)
+
+## Post Types
+
 * Hackernews
 * Slashdot
 * New York Times
