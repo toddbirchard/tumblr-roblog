@@ -178,6 +178,9 @@
 
       <style type="text/css">
       
+          
+      
+      
             .twitter-tweet p {
                 color: #1f1f1f !important;
             }
@@ -186,7 +189,9 @@
                 color:#313131 !important;
             }
             
-            
+            .previewimg[src="https://78.media.tumblr.com/394f8b4fa928b5f2d0c13645f99e2d33/tumblr_p7775bZRk81ute7e9o1_1280.png"] {
+                display:none !important;
+            }
             
             
             .Interesting .post-inner::before {
@@ -199,6 +204,21 @@ height: 25px;
 margin-left: 10px;
 margin-bottom: 5px;
             }
+            
+            
+            .Interesting .post-inner::after {
+            content: "via my reading list";
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+        right: 44px;
+        font-size: 14px;
+    color: #989898;
+            }
+            
+            
+            
+            
       
             .Technology .post-inner a.block-link {
                 background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/nyt.jpg') !important;
@@ -236,6 +256,11 @@ margin-left: 1px;
                 display:inline-block;
                 background-image:url('https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png');
                 background-size:cover;
+            }
+            
+            .Twitter .post-inner a{
+            
+            float: right;
             }
             
             
@@ -1910,6 +1935,8 @@ margin-left: 1px;
             			}
             			$(this).css('display', 'inline-block')
             		}
+            		
+            		$('.previewimg[src="https://78.media.tumblr.com/394f8b4fa928b5f2d0c13645f99e2d33/tumblr_p72vr959J01ute7e9o1_1280.png"]').css('display', 'none')
                 });
                 
              });
