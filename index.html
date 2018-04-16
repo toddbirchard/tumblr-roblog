@@ -182,8 +182,29 @@
           margin:0;
       }
       
+      .post-inner {
+              overflow: hidden;
+      }
+      
       #header {
           background-position-y: center !important;
+      }
+      
+      .Eagles .post-inner:before,
+      .eagles .post-inner:before{
+          content: " ";
+                display: inline-block;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/iggles.png') left center no-repeat;
+                    height: 30px;
+    width: 85px;
+    margin-bottom: 5px;
+    background-size: cover;
+          
+      }
+      
+      .Eagles .post-inner,
+      .eagles .post-inner {
+          background: url(https://tumblr.nyc3.digitaloceanspaces.com/igglesbg4.png) 100px 20px no-repeat, white !important;
       }
       
       .NYT .post-inner::before {
@@ -192,8 +213,23 @@
                 background: url('http://pluspng.com/img-png/nytimes-logo-png-symbol-new-york-times-1498.png') left center no-repeat;
                 background-size: contain;
                 width: 25px;
-height: 25px;
-margin-bottom: 5px;
+                height: 25px;
+                margin-bottom: 5px;
+            }
+            
+            .Eagles .post-inner::after,
+            .eagles .post-inner::after{
+                content: "Eagles breaking news";
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 27px;
+    font-size: 12px;
+    color: #989898;
+            }
+            
+            .eagles .previewimg {
+                display:none !important;
             }
             
             
@@ -203,7 +239,7 @@ margin-bottom: 5px;
     position: absolute;
     top: 22px;
     right: 27px;
-    font-size: 14px;
+    font-size: 12px;
     color: #989898;
             }
       
@@ -219,12 +255,12 @@ margin-bottom: 5px;
             
             
             .Meetup .post-inner::after {
-                content: "RSVPed to event";
+                content: "RSVPed via Meetup";
     display: inline-block;
     position: absolute;
     top: 22px;
     right: 27px;
-    font-size: 14px;
+    font-size: 12px;
     color: #989898;
             }
       
@@ -276,6 +312,16 @@ height: 25px;
 margin-bottom: 5px;
             }
             
+            .JIRA .issuesummary {
+                    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 100;
+    border-bottom: 1px solid #EBE9F6;
+    display: block;
+    padding-bottom: 20px;
+        margin-bottom: 20px;
+            }
+            
             
             .JIRA .post-inner::after {
                 content: "issue completed";
@@ -283,8 +329,23 @@ margin-bottom: 5px;
     position: absolute;
     top: 22px;
     right: 27px;
-    font-size: 14px;
+    font-size: 12px;
     color: #989898;
+            }
+            
+            .JIRA .caption > span::after{
+                content: " "";
+                width: 100%;
+                display: block;
+                border-bottom: 1px solid #999;
+            }
+            
+            .JIRA a {
+                       font-size: 10px;
+            }
+            
+            .JIRA .previewimg {
+                width:70%;
             }
           
       
@@ -319,7 +380,7 @@ margin-bottom: 5px;
     position: absolute;
     top: 22px;
     right: 27px;
-    font-size: 14px;
+    font-size: 12px;
     color: #989898;
             }
             
@@ -327,15 +388,12 @@ margin-bottom: 5px;
             
             
       
-            .Technology .post-inner a.block-link {
-                background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/nyt.jpg') !important;
-                background-size: cover !important;
-            }
+        
             
             .Medium .post-inner::before {
                 content: " ";
                 display: inline-block;
-                background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/mediumlogo.png') !important;
+                background-image: url('https://tumblr.nyc3.digitaloceanspaces.com/mediumdark.png') !important;
                 background-size: cover !important;
                 width: 85px;
 height: 16px;
@@ -351,9 +409,8 @@ margin-left: 1px;
             }
             
             .Twitter .post-inner {
-             background: linear-gradient( rgba(255, 255, 255, 0.1) 100%, rgba(255, 255, 255, 0.1)100%),url(https://tumblr.nyc3.digitaloceanspaces.com/twittercard.png) !important;
-    background-size: cover  !important;
-    background-position: 0px  !important;
+                 background: url(https://tumblr.nyc3.digitaloceanspaces.com/twitter4.png) 100px 50px no-repeat, white !important;
+    background-size: 450px !important;
             }
       
             .Twitter .post-inner h2::before {
@@ -413,10 +470,20 @@ margin-left: 1px;
                     top: 25px;
                 right: 26px;
                 color: #989898;
+                font-size:12px;
             }
             
             a.block-link {
-                color:white !important;
+                color:#4b4b4e !important;
+                background: none !important;
+            }
+            
+            a.block-link:hover {
+                color: #b15d61 !important;
+            }
+            
+            .host {
+                display:none !important;
             }
             
             .tumblr_video_container {
@@ -475,6 +542,7 @@ margin-left: 1px;
             .fixed-header .header-navigation ul.main-nav li a,
             .fixed-header .menu-burger button.menuToggle {
                 color: {color:Fixed Header Text Color}; /* Fixed Header Text Color */
+                
             }
 
             section#header .header-top button.menuToggle,
@@ -546,6 +614,7 @@ margin-left: 1px;
 
             .header-navigation ul.main-nav li a {
                   color: {color:Home Header Link Color}; /* Header link color */
+                  text-shadow: 0px 0px 10px black;
             }
 
             .search-block {
@@ -582,7 +651,7 @@ margin-left: 1px;
             }
 
             .posts article.post.link .post-inner a.block-link {
-                  background: {color:Link Text Color}; /* Link colour */
+                  
                   color: {color:Post Background}; /* Post Background */
             }
 
@@ -1830,8 +1899,7 @@ margin-left: 1px;
                         
                                                       <div class="post-meta">
                                       
-                                                            <div class="post-action{block:IfShowWhiteIcons} white{/block:IfShowWhiteIcons}">
-                              
+hacker                              
                                                                   <a href="{permalink}" class="view-icon">
                                                                         <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M12,4C7.3,4,3.2,6.9,1.2,11.1c-0.3,0.6-0.3,1.3,0,1.9C3.2,17.1,7.3,20,12,20s8.8-2.9,10.8-7.1   c0.3-0.6,0.3-1.3,0-1.9C20.8,6.9,16.7,4,12,4z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z" id="view"/></g></svg>
                                                                   </a>
