@@ -84,8 +84,8 @@
             <meta name="text:Footer Height" content="185"/>
 
             <meta name="text:Font Embed Code" content=""/>
-            <meta name="text:Font Family Titles" content="Arvo"/>
-            <meta name="text:Font Family Body" content="Montserrat"/>
+            <meta name="text:Font Family Titles" content="Montserrat"/>
+            <meta name="text:Font Family Body" content="Open Sans"/>
 
             <meta name="text:Google Analytics Code" content=""/>
             
@@ -222,14 +222,97 @@
                 content: "Eagles breaking news";
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 25px;
     right: 27px;
     font-size: 12px;
     color: #989898;
+    text-transform: uppercase;
             }
             
             .eagles .previewimg {
                 display:none !important;
+            }
+            
+            .vimeo .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/vimeo.png') left center no-repeat;
+                background-size: cover;
+                width: 25px;
+height: 25px;
+margin-bottom: 5px;
+            }
+            
+            
+            .vimeo .post-inner::after {
+                content: "uploaded to vimeo";
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    font-size: 12px;
+    color: #989898;
+    text-transform: uppercase;
+            }
+            
+            .GitHub .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/github-512.png') left center no-repeat;
+                background-size: cover;
+                width: 25px;
+height: 25px;
+margin-bottom: 5px;
+            }
+            
+            
+            .GitHub .post-inner::after {
+                content: "issue resolved";
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    font-size: 12px;
+    color: #989898;
+    text-transform: uppercase;
+            }
+            
+            .GitHub img {
+                width: 40px;
+    float: left;
+    margin-right: 10px !important;
+            }
+            
+            
+            .music .post-inner::before {
+                content: " ";
+                display: inline-block;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/spotify.png') left center no-repeat;
+                background-size: cover;
+                width: 25px;
+height: 25px;
+margin-bottom: 5px;
+            }
+            
+            
+            .music .post-inner::after {
+                content: "saved on spotify";
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 27px;
+    font-size: 12px;
+    color: #989898;
+    text-transform: uppercase;
+            }
+            
+            .music .iframe-wrapper {
+                    height: 79px;
+                    overflow: hidden;
+            }
+            
+            .music .caption {
+                display: none;
             }
             
             
@@ -237,10 +320,11 @@
                 content: "trending on NYT";
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 25px;
     right: 27px;
     font-size: 12px;
     color: #989898;
+    text-transform: uppercase;
             }
       
       .Meetup .post-inner::before {
@@ -258,10 +342,11 @@ margin-bottom: 5px;
                 content: "RSVPed via Meetup";
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 25px;
     right: 27px;
     font-size: 12px;
     color: #989898;
+    text-transform: uppercase;
             }
       
       .Meetup .host,
@@ -300,12 +385,16 @@ margin-bottom: 5px;
       .Meetup img {
           margin-bottom:15px !important;
       }
+      
+      .JIRA .post-inner {
+              background: url(https://tumblr.nyc3.digitaloceanspaces.com/atlassian2.png) 220px 248px no-repeat, white !important;
+      }
     
       
       .JIRA .post-inner::before {
                 content: " ";
                 display: inline-block;
-                background: url('https://cdn6.aptoide.com/imgs/9/9/b/99b698eae5433cc15b23862f4a305a37_icon.png') left center no-repeat;
+                background: url('https://tumblr.nyc3.digitaloceanspaces.com/logojira2.jpg') left center no-repeat;
                 background-size: cover;
                 width: 25px;
 height: 25px;
@@ -327,10 +416,11 @@ margin-bottom: 5px;
                 content: "issue completed";
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 25px;
     right: 27px;
     font-size: 12px;
     color: #989898;
+    text-transform: uppercase;
             }
             
             .JIRA .caption > span::after{
@@ -338,6 +428,7 @@ margin-bottom: 5px;
                 width: 100%;
                 display: block;
                 border-bottom: 1px solid #999;
+                text-transform: uppercase;
             }
             
             .JIRA a {
@@ -378,10 +469,11 @@ margin-bottom: 5px;
                 content: "via my reading list";
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 25px;
     right: 27px;
     font-size: 12px;
     color: #989898;
+    text-transform: uppercase;
             }
             
             
@@ -422,9 +514,25 @@ margin-left: 1px;
                 background-size:cover;
             }
             
-            .Twitter .post-inner a{
+            .Twitter .post-inner a {
                 color: #18607f;
-            float: right;
+            }
+            
+            .Twitter .post-inner h2 a {
+                float:right;
+            }
+            
+            .Twitter .post-inner > a {
+                font-size:10px;
+            }
+            
+            .Technology .previewimg {
+                    width: 100%;
+            }
+            
+            .Technology .postlink {
+                    height: 100px;
+                overflow: hidden;
             }
             
             
@@ -444,6 +552,7 @@ margin-left: 1px;
                 position: absolute;
                 top: 32px;
     right: 26px;
+    text-transform: uppercase;
             }
             
             .Medium a.block-link {
@@ -471,11 +580,13 @@ margin-left: 1px;
                 right: 26px;
                 color: #989898;
                 font-size:12px;
+                text-transform: uppercase;
             }
             
             a.block-link {
                 color:#4b4b4e !important;
                 background: none !important;
+                padding:0 !important;
             }
             
             a.block-link:hover {
@@ -686,6 +797,10 @@ margin-left: 1px;
                   color: {BackgroundColor}; /* Body Color */
             }
             
+            .block-link-text {
+                font-family:'Montserrat';
+            }
+            
             section.footer {
                   background-color: {color:Footer Background Color}; /* Footer Background Color */
             }
@@ -715,7 +830,7 @@ margin-left: 1px;
             
             .posts article.post .post-inner h2.post-title a,
             .posts article.post .post-inner h2.post-title a{
-                color:white;
+                /*color:white;*/
             }
             
             .view-icon {
@@ -2016,6 +2131,7 @@ hacker
       <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
       <script type="text/javascript" src="http://static.tumblr.com/kypr3bw/MYfovpifw/plugin-scripts.js"></script>
       <script type="text/javascript" src="http://static.tumblr.com/kypr3bw/CMdovpig3/bam-scripts.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300" rel="stylesheet">
       
       <script>
           //$('.post');
