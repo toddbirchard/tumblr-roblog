@@ -2186,20 +2186,24 @@ hacker
       </section>
       <!-- // Footer -->
 
-      <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
       <script type="text/javascript" src="http://static.tumblr.com/kypr3bw/MYfovpifw/plugin-scripts.js"></script>
       <script type="text/javascript" src="http://static.tumblr.com/kypr3bw/CMdovpig3/bam-scripts.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300" rel="stylesheet">
       
       <script>
+      
+      
+      
+      
+      
           //$('.post');
+         
          
               
               
-              
+              /*
               $( ".Pocket" ).each( function( index, el ) {
-                  console.log(el);
-                  console.log($( this ).find('a:nth-of-type(2)').attr('href'));
                 var posturl = $( this ).find('a:nth-of-type(2)').attr('href');
                 
                 //.replace('https://t.umblr.com/redirect?z=', '');
@@ -2207,10 +2211,9 @@ hacker
                 var apiCall = "https://api.linkpreview.net/?key=" + token + "&q=" + posturl;
                       var imgurl = $( 'previewimg' ).attr('src', posturl);
                       $.get( apiCall, function( data ) {
-                          console.log(data);
                           $( obj ).find('.previewimg').attr('src', data.image);
                 });
-            });
+            });*/
               
               
               /*
@@ -2328,8 +2331,60 @@ hacker
             feed.run();
           </script>
           
+          
+          
       
       {/block:IfInstagramAccessToken}
+      
+      
+      <script type="text/javascript">
+              
+             $(document).ready(function() {
+                 
+                 function hideBadImages(){
+                     $('.Hacker').each(function() {
+                     var bad_post = $(this).find('.previewimg:hidden');
+                     if (bad_post){
+                        $('.grid').masonry('remove', bad_post);
+                        console.log('bad image');
+                     }
+                     });
+                 }
+                  
+                  function hideHackerPosts() {
+                    $('.Hacker .caption p').each(function() {
+                      var paragraph = $(this).html();
+                      console.log('paragraph = ' + paragraph);
+                      var points = paragraph.split("Received")[1];
+                      console.log('points = ' + points);
+                      if (points < 400) {
+                        var bad_post = $(this).closest('.Hacker');
+                        $('.grid').masonry('remove', bad_post);
+                      }
+                      });
+                      
+                      
+                        
+                    }
+                    //hideHackerPosts();
+                    hideBadImages();
+                      
+                      $('.grid').on( 'remove', function( event, items ) {
+                          $('.grid').masonry('reload');
+                        });
+                        
+                    $('.grid').on( 'layoutComplete', function( event, laidOutItems ) {
+                        //hideBadImages();
+                    });
+                    
+                    $('.grid').on( 'append.infiniteScroll', function(){
+                        hideBadImages();
+                    });
+                        
+                    });
+                  
+
+          </script>
 
 </body>
 </html>
