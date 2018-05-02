@@ -3,7 +3,7 @@
 ![tumbler badge](https://img.shields.io/badge/platform-tumblr-lightgray.svg?longCache=true&style=flat-square)
 ![bootstrap badge](https://img.shields.io/badge/bootstrap-4.1.0-green.svg?longCache=true&style=flat-square)
 
-A theme for people who dont care about Tumblr, but love backlinks.
+A theme for people who dont care about Tumblr, but love backlinks. Preview is live here: https://toddbirchard.io/
 
 ![Roblog](https://tumblr.nyc3.digitaloceanspaces.com/placeit%20(3).png)
 
@@ -19,17 +19,15 @@ Activity & recommendation feed which functions autonomously. Intended to receive
 * Spotify
 * Twitter
 * Instagram
-- Github
+* Github
 * JIRA
 * RSS
 
 ## Roadmap
 
-Currently in active development; NOT production-ready.
+Currently in active development; NOT production-ready. Project is intended to expand into standalone app.
 
-Project is intended to expand into standalone app.
-
-### Upcoming
-- Misc RSS feeds
-- Misc APIs
-- Quora
+### Upcoming Features
+* Misc RSS feeds
+* Misc APIs
+* Quora
