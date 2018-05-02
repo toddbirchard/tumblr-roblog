@@ -258,6 +258,66 @@
                 margin-top:10px;
             }
             
+            .HackersAndSlackers .caption * {
+                display:none;
+                
+            }
+            
+            .HackersAndSlackers .caption {
+                    overflow: hidden;
+            }
+            
+            .HackersAndSlackers .author {
+                display: block;
+                font-weight: 700;
+                font-size: 12px;
+                margin: 10px 0;
+            }
+            
+            .HackersAndSlackers h2 {  
+                margin: 0 !important;
+                font-size: 20px;
+                font-family: Montserrat;
+                    font-weight: 700;
+                    color: rgb(51, 51, 51) !important;
+                    line-height:1;
+                    display: block !important;
+          }
+            
+          .HackersAndSlackers h3 {  
+            margin: 5px 0 15px !important;
+            font-size: 17px;
+            font-weight: 300;
+            display: block !important;
+          }
+            
+            
+            .HackersAndSlackers .description {
+                display: block;
+            }
+            
+            .HackersAndSlackers .description * {
+                display: none;
+            }
+            
+            .HackersAndSlackers .caption > a {
+                display: block;
+                float: right;
+                font-weight: 800;
+            }
+            
+            
+            
+            
+            .HackersAndSlackers .description p:nth-of-type(1) {
+                width: 100%;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                    height: 76px;
+            }
+            
             .Eagles .post-inner::after,
             .eagles .post-inner::after{
                 content: "Eagles breaking news";
@@ -333,6 +393,14 @@ margin-bottom: 5px;
     text-transform: uppercase;
             }
             
+            .GitHub h2 {
+                margin-bottom: 20px !important;
+            }
+            
+            .GitHub .tmblr-full {
+                margin: 20px 0;
+            }
+            
             .GitHub img {
                 width: 40px;
     float: left;
@@ -380,7 +448,7 @@ margin-bottom: 5px;
                 content: "trending on NYT";
     display: inline-block;
     position: absolute;
-    top: 25px;
+    top: 21px;
     right: 27px;
     font-size: 12px;
     color: #989898;
@@ -552,6 +620,17 @@ height: 16px;
 margin-left: 1px;
             }
             
+            .Medium .post-inner::after {
+                content: "clapped on Medium";
+                display: inline-block;
+                position: absolute;
+                    top: 25px;
+                right: 26px;
+                color: #989898;
+                font-size:12px;
+                text-transform: uppercase;
+            }
+            
             .Hacking .post-inner {
                     background: url(https://tumblr.nyc3.digitaloceanspaces.com/ycom.jpg) 170px 60px no-repeat, white !important;
     background-size: 200px !important;
@@ -641,6 +720,19 @@ margin-left: 1px;
                 text-transform: uppercase;
             }
             
+            .Hacker p {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                height:100px; 
+                overflow: hidden; 
+                text-overflow: ellipsis;
+                width:100%;
+            }
+            
+            .Hacker div {
+                    margin: 10px 0;
+            }
+            
             a.block-link {
                 color:#4b4b4e !important;
                 background: none !important;
@@ -727,7 +819,7 @@ margin-left: 1px;
             }
 
             section#header .header-content .tagline {
-                  font-size: {text:Home Cover Tagline Size}px; /* Tagline Font Size */
+                  font-size: {text:Home Cover Tagline Size}px !important; /* Tagline Font Size */
             }
             
             section#slide-in {
