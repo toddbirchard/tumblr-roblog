@@ -266,7 +266,7 @@
         display: block;
         font-weight: 700;
         font-size: 12px;
-        margin: 10px 0 0;
+        margin: 15px 0 0;
         float: left;
       }
 
@@ -289,17 +289,24 @@
 
       .HackersAndSlackers .description {
         display: block;
+            height: 80px;
+        overflow: hidden;
       }
 
       .HackersAndSlackers .description * {
         display: none;
       }
 
-      .HackersAndSlackers .caption>a {
+      .HackersAndSlackers .caption>a,
+      .btn {
         display: block;
         float: right;
         font-weight: 800;
         margin: 9px 0px 0;
+        padding: 8px 12px;
+        background-color: #1EAEDB;
+        color: white;
+        font-size: 14px;
       }
 
       .HackersAndSlackers .description p:nth-of-type(1) {
@@ -391,9 +398,13 @@
       }
 
       .GitHub img {
-        width: 40px;
-        float: left;
+        width: 100%;
         margin-right: 10px !important;
+      }
+      
+      .GitHub .created {
+         display: block;
+        font-size: 12px;
       }
 
       img[src*="https://78.media.tumblr.com/394f8b4fa928b5f2d0c13645f99e2d33/tumblr_p7bc6wCzUJ1ute7e9o1_1280.png"] {
@@ -492,6 +503,7 @@
 
       .Meetup img {
         margin-bottom: 15px !important;
+        width: 100%;
       }
 
       .JIRA .post-inner {
@@ -562,9 +574,8 @@
         display: inline-block;
         background: url('https://tumblr.nyc3.digitaloceanspaces.com/pocketdark.png') left center no-repeat;
         background-size: cover;
-        width: 100px;
-        height: 25px;
-        margin-bottom: 5px;
+        width: 89px;
+        height: 20px;
       }
 
       .Interesting .post-inner::after {
@@ -941,9 +952,11 @@
                 margin:0 auto;
             }
 
-            .posts article.post .post-inner h2.post-title a,
-            .posts article.post .post-inner h2.post-title a{
-                /*color:white;*/
+            .post-inner h2,
+            .post-inner h2 a{
+                    font-size: 22px !important;
+                    color: #333333 !important;
+                    line-height: 1.2 !important;
             }
 
             .view-icon {
