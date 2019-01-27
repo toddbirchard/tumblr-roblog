@@ -29,10 +29,10 @@
 
       {/block:IfNotFontEmbedCode}
 
-      <link rel="stylesheet" href="http://static.tumblr.com/kypr3bw/NtMou9pm5/bam-icons.css">
+      <link rel="stylesheet" href="https://static.tumblr.com/kypr3bw/NtMou9pm5/bam-icons.css">
 
-      <link rel="stylesheet" href="http://static.tumblr.com/kypr3bw/ykhou0hhw/plugin-styles.css">
-      <link rel="stylesheet" href="http://static.tumblr.com/kypr3bw/Rs7ovqyw5/bam-florence.css">
+      <link rel="stylesheet" href="https://static.tumblr.com/kypr3bw/ykhou0hhw/plugin-styles.css">
+      <link rel="stylesheet" href="https://static.tumblr.com/kypr3bw/Rs7ovqyw5/bam-florence.css">
 
       {block:Hidden}
             <!-- Custom Colors -->
@@ -198,8 +198,28 @@
         padding: 20px !important;
       }
 
+      .post-inner p {
+             font-size: 15px !important;
+            line-height: 1.5 !important;
+            margin: 0 0 25px !important;
+            letter-spacing: 0.3px !important;
+            opacity: 1 !important;
+            font-weight: 600 !important;
+      }
+
       .post-inner {
         overflow: hidden;
+      }
+
+      .post-inner::after {
+          display: inline-block !important;
+        position: absolute !important;
+        top: 22px !important;
+        right: 27px !important;
+        font-size: 12px !important;
+        color: #3e4047 !important;
+        text-transform: uppercase !important;
+        font-weight: 900 !important;
       }
 
       #header {
@@ -223,7 +243,7 @@
       .NYT .post-inner::before {
         content: " ";
         display: inline-block;
-        background: url('http://pluspng.com/img-png/nytimes-logo-png-symbol-new-york-times-1498.png') left center no-repeat;
+        background: url('https://pluspng.com/img-png/nytimes-logo-png-symbol-new-york-times-1498.png') left center no-repeat;
         background-size: contain;
         width: 25px;
         height: 25px;
@@ -401,7 +421,7 @@
         width: 100%;
         margin-right: 10px !important;
       }
-      
+
       .GitHub .created {
          display: block;
         font-size: 12px;
@@ -569,7 +589,8 @@
         display: none !important;
       }
 
-      .Interesting .post-inner::before {
+      .Interesting .post-inner::before,
+      .Pocket .post-inner::before {
         content: " ";
         display: inline-block;
         background: url('https://tumblr.nyc3.digitaloceanspaces.com/pocketdark.png') left center no-repeat;
@@ -578,15 +599,24 @@
         height: 20px;
       }
 
-      .Interesting .post-inner::after {
+      .Interesting .post-inner::after,
+      .Pocket .post-inner::before {
         content: "via my reading list";
         display: inline-block;
-        position: absolute;
         top: 25px;
         right: 27px;
         font-size: 12px;
         color: #989898;
         text-transform: uppercase;
+      }
+
+      .Pocket .caption {
+          margin:0 !important;
+      }
+
+      .Pocket .posts article.post.link {
+              font-size: 18px;
+             font-weight: bold;
       }
 
       .Medium .post-inner::before {
@@ -1165,118 +1195,93 @@
                         {/block:IfQuoraURL}
                   </ul>
             </div><!-- .social-nav -->
-
       </section>
       <!-- // Slide in -->
-
       <!-- Fixed Header -->
       <div class="fixed-header">
           <div class="container fluid">
-
                 <div class="header-logo">
-
                       <div class="table">
                             <div class="table-row">
                                   <div class="table-cell middle">
-
                                         {block:IfLogoImage}
                                               <a href="{BlogURL}" class="logo">
                                                   <img src="{image:Logo}" alt="{Title}"/>
                                               </a>
                                         {/block:IfLogoImage}
-
                                         {block:IfNotLogoImage}
-
                                               {block:ShowAvatar}
                                                   <a href="{BlogURL}" class="avatar-image {AvatarShape}">
                                                       <img src="{PortraitURL-48}" alt="{Title}"/>
                                                   </a>
                                               {/block:ShowAvatar}
-
                                         {/block:IfNotLogoImage}
-
                                   </div>
                             </div>
                       </div>
-
-                </div><!-- .header-logo -->
-
+                </div>
+                <!-- .header-logo -->
                 <div class="header-navigation">
-
                       <ul class="main-nav">
                             {block:HasPages}
                                   {block:Pages}
                                         <li><a href="{URL}" title="{Label}">{Label}</a></li>
                                   {/block:Pages}
                             {/block:HasPages}
-
                             {block:IfNavTagstoDisplay}
                                 <li class="tags-nav">
                                     <a href="#">{text:Nav Tag Title} <i class="icon-left-open"></i></a>
                                     <span class="tags-list">{text:Nav Tags to Display}</span>
                                     <ul class="tags-list">
-
                                     </ul>
                                 </li>
                             {/block:IfNavTagstoDisplay}
 
-
                             {block:IfShowArchiveLink}
                                   <li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
                             {/block:IfShowArchiveLink}
-                      </ul><!-- .main-nav -->
-
-                </div><!-- .header-navigation -->
-
+                      </ul>
+                      <!-- .main-nav -->
+                </div>
+                <!-- .header-navigation -->
                 <div class="menu-burger">
-
                       <button class="menuToggle">
                             <i class="icon-menu"></i>
                       </button>
-
-                </div><!-- .menu-burger -->
-
-          </div><!-- .container -->
-      </div><!-- .header-top -->
+                </div>
+                <!-- .menu-burger -->
+          </div>
+          <!-- .container -->
+      </div>
+      <!-- .header-top -->
 
       <!-- Header -->
       <section id="header" class="parallax">
             <div class="color-overlay"></div>
-
             <div class="container fluid">
-
                   <div class="header-top">
-
                         <div class="header-logo">
-
                               <div class="table">
                                     <div class="table-row">
                                           <div class="table-cell middle">
-
                                                 {block:IfLogoImage}
                                                       <a href="{BlogURL}" class="logo">
                                                             <img src="{image:Logo}" alt="{Title}"/>
                                                       </a>
                                                 {/block:IfLogoImage}
-
                                                 {block:IfNotLogoImage}
-
                                                       {block:ShowAvatar}
                                                             <a href="{BlogURL}" class="avatar-image {AvatarShape}">
                                                                   <img src="{PortraitURL-48}" alt="{Title}"/>
                                                             </a>
                                                       {/block:ShowAvatar}
-
                                                 {/block:IfNotLogoImage}
-
                                           </div>
                                     </div>
                               </div>
-
-                        </div><!-- .header-logo -->
-
+                        </div>
+                        <!-- .header-logo -->
                         <div class="header-navigation">
-
                               <ul class="main-nav">
                                     {block:HasPages}
                                           {block:Pages}
@@ -1296,34 +1301,27 @@
                                     {/block:IfNavTagstoDisplay}
 
 
-
                                     {block:IfShowArchiveLink}
                                           <li><a href="/archive" title="{lang:Archive}">{lang:Archive}</a></li>
                                     {/block:IfShowArchiveLink}
-                              </ul><!-- .main-nav -->
-
-                        </div><!-- .header-navigation -->
-
+                              </ul>
+                              <!-- .main-nav -->
+                        </div>
+                        <!-- .header-navigation -->
                         <div class="menu-burger">
-
                               <button class="menuToggle">
                                     <i class="icon-menu"></i>
                               </button>
-
-                        </div><!-- .menu-burger -->
-
-                  </div><!-- .header-top -->
-
+                        </div>
+                        <!-- .menu-burger -->
+                  </div>
+                  <!-- .header-top -->
                   {block:IndexPage}
-
                         <div class="header-content">
-
                               <div class="table">
                                     <div class="table-row">
                                           <div class="table-cell middle">
-
                                                 <div class="header-content-inner">
-
                                                       {block:ShowTitle}
                                                             <div>
                                                                   <a href="{BlogURL}" class="blog-title">
@@ -1331,25 +1329,20 @@
                                                                   </a>
                                                             </div>
                                                       {/block:ShowTitle}
-
                                                       {block:ShowDescription}
                                                             <div class="tagline">
                                                                   {Description}
                                                             </div>
                                                       {/block:ShowDescription}
-
                                                 </div>
-
                                           </div>
                                     </div>
                               </div>
-
-                        </div><!-- .header-content -->
-
+                        </div>
+                        <!-- .header-content -->
                   {/block:IndexPage}
-
-            </div><!-- .container -->
-
+            </div>
+            <!-- .container -->
       </section>
       <!-- // Header -->
 
@@ -1387,7 +1380,7 @@
                                           <div class="reblogged">
 
                                                 <div class="icon">
-                                                      <svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg>
+                                                      <svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" fill="#000"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg>
                                                 </div>
 
                                                 <div class="title">
@@ -1729,7 +1722,7 @@
 
                                                 {block:IndexPage}
                                                       <a href="{permalink}" class="view-icon">
-                                                            <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M12,4C7.3,4,3.2,6.9,1.2,11.1c-0.3,0.6-0.3,1.3,0,1.9C3.2,17.1,7.3,20,12,20s8.8-2.9,10.8-7.1   c0.3-0.6,0.3-1.3,0-1.9C20.8,6.9,16.7,4,12,4z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z" id="view"/></g></svg>
+                                                            <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M12,4C7.3,4,3.2,6.9,1.2,11.1c-0.3,0.6-0.3,1.3,0,1.9C3.2,17.1,7.3,20,12,20s8.8-2.9,10.8-7.1   c0.3-0.6,0.3-1.3,0-1.9C20.8,6.9,16.7,4,12,4z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z" id="view"/></g></svg>
                                                       </a>
                                                 {/block:IndexPage}
 
@@ -1907,7 +1900,7 @@
                                                             <div class="reblogged">
 
                                                                   <div class="icon">
-                                                                        <svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg>
+                                                                        <svg width="100%" height="100%" viewBox="0 0 21 21" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" fill="#000"><path d="M5.01092527,5.99908429 L16.0088498,5.99908429 L16.136,9.508 L20.836,4.752 L16.136,0.083 L16.1360004,3.01110845 L2.09985349,3.01110845 C1.50585349,3.01110845 0.979248041,3.44726568 0.979248041,4.45007306 L0.979248041,10.9999998 L3.98376463,8.30993634 L3.98376463,6.89801007 C3.98376463,6.20867902 4.71892527,5.99908429 5.01092527,5.99908429 Z"></path><path d="M17.1420002,13.2800293 C17.1420002,13.5720293 17.022957,14.0490723 16.730957,14.0490723 L4.92919922,14.0490723 L4.92919922,11 L0.5,15.806 L4.92919922,20.5103758 L5.00469971,16.9990234 L18.9700928,16.9990234 C19.5640928,16.9990234 19.9453125,16.4010001 19.9453125,15.8060001 L19.9453125,9.5324707 L17.142,12.203"></path></svg>
                                                                   </div>
 
                                                                   <div class="title">
@@ -2142,7 +2135,7 @@
 
 hacker
                                                                   <a href="{permalink}" class="view-icon">
-                                                                        <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M12,4C7.3,4,3.2,6.9,1.2,11.1c-0.3,0.6-0.3,1.3,0,1.9C3.2,17.1,7.3,20,12,20s8.8-2.9,10.8-7.1   c0.3-0.6,0.3-1.3,0-1.9C20.8,6.9,16.7,4,12,4z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z" id="view"/></g></svg>
+                                                                        <svg version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M12,4C7.3,4,3.2,6.9,1.2,11.1c-0.3,0.6-0.3,1.3,0,1.9C3.2,17.1,7.3,20,12,20s8.8-2.9,10.8-7.1   c0.3-0.6,0.3-1.3,0-1.9C20.8,6.9,16.7,4,12,4z M12,16c-2.2,0-4-1.8-4-4c0-2.2,1.8-4,4-4s4,1.8,4,4C16,14.2,14.2,16,12,16z" id="view"/></g></svg>
                                                                   </a>
 
                                                                   {block:IfNotShowWhiteIcons}
@@ -2255,54 +2248,11 @@ hacker
       <!-- // Footer -->
 
       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="http://static.tumblr.com/kypr3bw/MYfovpifw/plugin-scripts.js"></script>
-      <script type="text/javascript" src="http://static.tumblr.com/kypr3bw/CMdovpig3/bam-scripts.js"></script>
+      <script type="text/javascript" src="https://static.tumblr.com/kypr3bw/MYfovpifw/plugin-scripts.js"></script>
+      <script type="text/javascript" src="https://static.tumblr.com/kypr3bw/CMdovpig3/bam-scripts.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300" rel="stylesheet">
 
       <script>
-
-
-
-
-
-          //$('.post');
-
-
-
-
-              /*
-              $( ".Pocket" ).each( function( index, el ) {
-                var posturl = $( this ).find('a:nth-of-type(2)').attr('href');
-
-                //.replace('https://t.umblr.com/redirect?z=', '');
-                var token = '5aca1fa1a6277761e0da615401088ed62e4aaf92fba08';
-                var apiCall = "https://api.linkpreview.net/?key=" + token + "&q=" + posturl;
-                      var imgurl = $( 'previewimg' ).attr('src', posturl);
-                      $.get( apiCall, function( data ) {
-                          $( obj ).find('.previewimg').attr('src', data.image);
-                });
-            });*/
-
-
-              /*
-
-
-              $.each( 'article', function( key, value ) {
-                    console.log('obj = ' + obj);
-                      var posturl = $( obj ).find('.content a').attr('href').replace('https://t.umblr.com/redirect?z=', '');
-                      var url = posturl;
-
-                      console.log('posturl = ' + posturl);
-                      var apiCall = "https://api.linkpreview.net/?key=" + token + "&q=" + posturl;
-
-                      $.getJSON( apiCall, function( data ) {
-                          console.log(data.image);
-                          $( obj ).find('.previewimg').attr('src', data.image);
-                });
-
-
-                  */
-
 
       </script>
 
@@ -2343,29 +2293,28 @@ hacker
 
       {block:IfNavTagstoDisplay}
 
-          <!-- Nav Tags Links -->
-          <script type="text/javascript">
-             $(document).ready(function() {
+      <!-- Nav Tags Links -->
+      <script type="text/javascript">
+        $(document).ready(function() {
 
-        	    $('ul.main-nav li.tags-nav').each(function() {
-            		var tags = $('span.tags-list', this).html();
-            		if (tags !== '')
-            		{
-            			var tags = tags.split(',');
-            			for (var i = 0; i < tags.length; i++){
-            				var tag = tags[i].trim(),
-            					lower = tag.replace(/\s+/g, "-").toLowerCase(),
-            					slug = encodeURIComponent(lower);
-            				$('ul.tags-list', this).append('<li><a href="/tagged/' + slug + '" title="' + tag + '">' + tag + "</a></li>")
-            			}
-            			$(this).css('display', 'inline-block')
-            		}
+          $('ul.main-nav li.tags-nav').each(function() {
+            var tags = $('span.tags-list', this).html();
+            if (tags !== '') {
+              var tags = tags.split(',');
+              for (var i = 0; i < tags.length; i++) {
+                var tag = tags[i].trim(),
+                  lower = tag.replace(/\s+/g, "-").toLowerCase(),
+                  slug = encodeURIComponent(lower);
+                $('ul.tags-list', this).append('<li><a href="/tagged/' + slug + '" title="' + tag + '">' + tag + "</a></li>")
+              }
+              $(this).css('display', 'inline-block')
+            }
 
-            		$('.previewimg[src="https://78.media.tumblr.com/394f8b4fa928b5f2d0c13645f99e2d33/tumblr_p72vr959J01ute7e9o1_1280.png"]').css('display', 'none')
-                });
+            $('.previewimg[src="https://78.media.tumblr.com/394f8b4fa928b5f2d0c13645f99e2d33/tumblr_p72vr959J01ute7e9o1_1280.png"]').css('display', 'none')
+          });
 
-             });
-          </script>
+        });
+      </script>
 
       {/block:IfNavTagstoDisplay}
 
@@ -2385,30 +2334,24 @@ hacker
 
       {block:IfInstagramAccessToken}
 
-          <script type="text/javascript">
-            var a = '{text:Instagram Access Token}',
-                i = a.substr(0, a.indexOf('.'));
+      <script type="text/javascript">
+        var a = '{text:Instagram Access Token}',
+          i = a.substr(0, a.indexOf('.'));
 
-            var feed = new Instafeed({
-                get: 'user',
-                accessToken: a,
-                userId: i,
-                limit: 8,
-                target: 'instagram-feed'
-            });
-            feed.run();
-          </script>
-
-
-
+        var feed = new Instafeed({
+          get: 'user',
+          accessToken: a,
+          userId: i,
+          limit: 8,
+          target: 'instagram-feed'
+        });
+        feed.run();
+      </script>
 
       {/block:IfInstagramAccessToken}
 
-
       <script type="text/javascript">
-
              $(document).ready(function() {
-
                  function hideBadImages(){
                      $('.Hacker').each(function() {
                      var bad_post = $(this).find('.previewimg:hidden');
@@ -2430,29 +2373,23 @@ hacker
                         $('.grid').masonry('remove', bad_post);
                       }
                       });
-
-
-
                     }
+
                     //hideHackerPosts();
                     hideBadImages();
-
-                      $('.grid').on( 'remove', function( event, items ) {
-                          $('.grid').masonry('reload');
-                        });
-
-                    $('.grid').on( 'layoutComplete', function( event, laidOutItems ) {
-                        //hideBadImages();
+                    $('.grid').on('remove', function(event, items) {
+                      $('.grid').masonry('reload');
                     });
 
-                    $('.grid').on( 'append.infiniteScroll', function(){
-                        hideBadImages();
+                    $('.grid').on('layoutComplete', function(event, laidOutItems) {
+                      //hideBadImages();
                     });
 
+                    $('.grid').on('append.infiniteScroll', function() {
+                    hideBadImages();
                     });
+                  });
 
-
-          </script>
-
+      </script>
 </body>
 </html>
