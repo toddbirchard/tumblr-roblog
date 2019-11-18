@@ -5,7 +5,7 @@
 
 A theme for people who dont care about Tumblr, but love backlinks. Preview is live here: https://toddbirchard.io/
 
-![Roblog](https://tumblr.nyc3.digitaloceanspaces.com/img/social/roblog.jpg)
+![Roblog](https://tumblr.nyc3.digitaloceanspaces.com/social/roblog.jpg)
 
 Activity & recommendation feed which functions autonomously. Intended to receive content via third-party integrations,  such as IFTTT, Zapier, Automate.io, Parabola, and others. The logic which determines post content is executed externally from this theme; posts are intended to be created on user's behalf.
 
